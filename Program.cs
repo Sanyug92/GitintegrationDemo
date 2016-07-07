@@ -21,7 +21,11 @@ namespace GitIntegrationDemo
                 InitialCost = 30000,
                 TotalPaid = 29999.99,
                 TopSpeed = 160,
-                Convertible = false
+                Convertible = false,
+                Country = "Japan",
+                Mileage = 145000,
+                YearBought = 2013,
+                CurrentYear = 2016,
             };
 
             var sanyuCar = new Car()
@@ -31,13 +35,19 @@ namespace GitIntegrationDemo
                 InitialCost = 20000,
                 TotalPaid = 19000,
                 TopSpeed = 260,
-                Convertible = false
-            };
+                Convertible = false,
+                Country = "Germany",
+                Mileage = 145000,
+                YearBought = 2013,
+                CurrentYear = 2016,
+    };
 
             myCar.PrintCarData();
             myCar.IsCarPaid();
+            myCar.YearsOfOwnership();
             sanyuCar.PrintCarData();
             sanyuCar.IsCarPaid();
+            sanyuCar.YearsOfOwnership();
 
             //PrintCarData();
             

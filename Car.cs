@@ -14,6 +14,12 @@ namespace GitIntegrationDemo
         public double TotalPaid;
         public int TopSpeed;
         public bool Convertible;
+        public string Country;
+        public int Mileage;
+        public int YearBought;
+        public int CurrentYear;
+
+
 
         public string GetWarrantyData()
         {
@@ -37,7 +43,6 @@ namespace GitIntegrationDemo
             msg.AppendLine("Convertible: " + mycar.Convertible);
             msg.AppendLine("Warranty Data: " + mycar.GetWarrantyData());
             msg.AppendLine("Is the car paid in full? " + (mycar.PaidInFull() ? "Yes" : "No"));
-
             Console.WriteLine(msg);
         }
 
@@ -53,6 +58,9 @@ namespace GitIntegrationDemo
             msg.AppendLine("Convertible2: " + Convertible);
             msg.AppendLine("Warranty Data2: " + GetWarrantyData());
             msg.AppendLine("Is the car paid in full2? " + (PaidInFull() ? "Yes" : "No"));
+            msg.AppendLine("Country: " + Country);
+            msg.AppendLine("Mileage: " + Mileage);
+            msg.AppendLine("Years of Onwership: " + YearsOfOwnership());
 
             Console.WriteLine(msg);
         }
@@ -60,6 +68,11 @@ namespace GitIntegrationDemo
         public void IsCarPaid()
         {
             Console.WriteLine(string.Format("My car is {0}paid", (PaidInFull() ? "" : "Not ")));
+        }
+
+        public int YearsOfOwnership()
+        {
+            return (CurrentYear - YearBought);
         }
 
     }
